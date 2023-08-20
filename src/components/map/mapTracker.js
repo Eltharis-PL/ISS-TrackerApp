@@ -1,6 +1,7 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View, Image } from "react-native";
 import MapView, { Marker } from 'react-native-maps';
+
 import mapStyles from "./styles";
 
 const MapTracker = () => {
@@ -20,12 +21,15 @@ const MapTracker = () => {
                         latitude: 37.78825,
                         longitude: -122.4324,
                     }}
-                    image={require('../../assets/space-station.png')}
-                />
+                >
+                    <Image
+                        source={require('../../assets/space-station.png')}
+                        style={mapStyles.issStyle}
+                    />
+                </Marker>
             </MapView>
-
         </View>
-    )
+    );
 }
 
 export default MapTracker;
